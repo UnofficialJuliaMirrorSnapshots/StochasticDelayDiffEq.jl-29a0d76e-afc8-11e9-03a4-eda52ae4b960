@@ -1,5 +1,5 @@
-import Pkg; Pkg.activate("."); #Pkg.instantiate()
+using SafeTestsets
 
-using StochasticDelayDiffEq, Test
-
-@time include("test_prob_sol.jl")
+@safetestset "SDDEProblem, solve" begin
+    include("test_prob_sol.jl")
+end
